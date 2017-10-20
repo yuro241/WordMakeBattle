@@ -11,6 +11,8 @@
 		5029B4FC1F98A6B30029DD00 /* Faild.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5029B4FB1F98A6B30029DD00 /* Faild.storyboard */; };
 		5029B4FE1F98C5C00029DD00 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5029B4FD1F98C5C00029DD00 /* ResultViewController.swift */; };
 		5059DCF51F9A2F39009470BC /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5059DCF41F9A2F39009470BC /* TitleViewController.swift */; };
+		5059DCF91F9A3579009470BC /* Title.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5059DCF81F9A344D009470BC /* Title.storyboard */; };
+		5059DCFA1F9A359E009470BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5059DCF71F9A343A009470BC /* Main.storyboard */; };
 		50EF0CBC1F98979200477EF9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF0CBB1F98979200477EF9 /* APIRequest.swift */; };
 		50F90EEB1F982E3C00D67A28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F90EEA1F982E3C00D67A28 /* AppDelegate.swift */; };
 		50F90EED1F982E3C00D67A28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F90EEC1F982E3C00D67A28 /* MainViewController.swift */; };
@@ -45,9 +47,9 @@
 		42CF5DAC1DA48959D9A90B19 /* Pods_techHackUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_techHackUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5029B4FB1F98A6B30029DD00 /* Faild.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Faild.storyboard; sourceTree = "<group>"; };
 		5029B4FD1F98C5C00029DD00 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
-		5059DCF31F9A2DF2009470BC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5059DCF41F9A2F39009470BC /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
-		5059DCF61F9A2FED009470BC /* Title.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Title.storyboard; sourceTree = "<group>"; };
+		5059DCF71F9A343A009470BC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		5059DCF81F9A344D009470BC /* Title.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Title.storyboard; sourceTree = "<group>"; };
 		50EF0CBB1F98979200477EF9 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		50F90EE71F982E3C00D67A28 /* techHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = techHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F90EEA1F982E3C00D67A28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -168,8 +170,8 @@
 		50F90F1D1F9832E000D67A28 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5059DCF31F9A2DF2009470BC /* Main.storyboard */,
-				5059DCF61F9A2FED009470BC /* Title.storyboard */,
+				5059DCF71F9A343A009470BC /* Main.storyboard */,
+				5059DCF81F9A344D009470BC /* Title.storyboard */,
 				5029B4FB1F98A6B30029DD00 /* Faild.storyboard */,
 				50F90F1A1F9830B000D67A28 /* Result.storyboard */,
 				50F90EF31F982E3C00D67A28 /* LaunchScreen.storyboard */,
@@ -319,6 +321,8 @@
 				50F90F1B1F9830B000D67A28 /* Result.storyboard in Resources */,
 				5029B4FC1F98A6B30029DD00 /* Faild.storyboard in Resources */,
 				50F90EF51F982E3C00D67A28 /* LaunchScreen.storyboard in Resources */,
+				5059DCFA1F9A359E009470BC /* Main.storyboard in Resources */,
+				5059DCF91F9A3579009470BC /* Title.storyboard in Resources */,
 				50F90EF21F982E3C00D67A28 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -75,6 +75,8 @@ class MainViewController: APIRequest {
         answer = answer + sender.titleLabel!.text!
         answerView.text = answer
         sender.isEnabled = false
+        sender.layer.borderColor = UIColor.red.cgColor
+        sender.setTitleColor(UIColor.red, for: .normal)
         setButtonEnable()
     }
 
