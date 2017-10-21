@@ -17,18 +17,22 @@ class MainViewController: APIRequest {
     @IBOutlet weak var deleteAllButton: UIButton!
     
     //この辺はbaseでまとめたい
-    let lettersArray = ["B","C","D","F","G","H","J","K","L","M","N","P","Q","R","S","T","V","W","X","Y","Z"]
-    let vowelsArray = ["A","E","I","O","U"]
-    let consonantButtonNum: Int = 10
-    let vowelButtonNum: Int = 5
+    var margin_width: CGFloat = 0.0
+    var margin_vowel_width: CGFloat = 10
+    var margin_height: CGFloat = 0.0
     
     var answer: String = ""
     var timeCount: Float = 20.0
     var timer: Timer!
     let userData = UserDefaults.standard
+    let width = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        margin_width = self.view.bounds.width / 12
+        margin_vowel_width = self.view.bounds.width / 6
+        margin_height = self.view.bounds.height / 4
         
         answerView.layer.borderWidth = 1.0
         answerView.layer.borderColor = UIColor.gray.cgColor
@@ -37,8 +41,8 @@ class MainViewController: APIRequest {
         deleteButton.addTarget(self, action: #selector(self.deleteAnswer), for: .touchUpInside)
         deleteAllButton.addTarget(self, action: #selector(self.deleteAllAnswer), for: .touchUpInside)
         
-        consonantButtonSet(length:lettersArray.count, letters:lettersArray, count: consonantButtonNum)
-        vowelButtonSet(length: vowelsArray.count, letters: vowelsArray, count: vowelButtonNum)
+        consonantButtonSet(length:Alphabet.consonantCount, letters:Alphabet.consonantArray, count: Alphabet.consonantButtonNum)
+        vowelButtonSet(length: Alphabet.vowelCount, letters: Alphabet.vowelsArray, count: Alphabet.vowelButtonNum)
         setButtonDisable()
     }
     
@@ -64,8 +68,11 @@ class MainViewController: APIRequest {
             self.view.addSubview(button)
             
             button.snp.makeConstraints{(make) in
-                make.top.equalTo(self.view.snp.top).offset(175)
-                make.left.equalTo(self.view.snp.left).offset(num * 30 + 35)
+//                margin_height = self.view.bounds.height/ 5 + 15
+                make.top.equalTo(self.view.snp.top).offset(margin_height)
+//                margin_width = self.view.snp.width / 10
+                print(margin_width)
+                make.left.equalTo(self.view.snp.left).offset(CGFloat(num) * margin_width + margin_width)
             }
         }
     }
@@ -85,8 +92,10 @@ class MainViewController: APIRequest {
             self.view.addSubview(button)
             
             button.snp.makeConstraints{(make) in
-                make.top.equalTo(self.view.snp.top).offset(275)
-                make.left.equalTo(self.view.snp.left).offset(num * 60 + 55)
+                margin_height = self.view.bounds.height / 2.5
+                make.top.equalTo(self.view.snp.top).offset(margin_height)
+                print(margin_vowel_width)
+                make.left.equalTo(self.view.snp.left).offset(CGFloat(num) * margin_vowel_width + 50)
             }
         }
     }
