@@ -6,17 +6,19 @@
 //  Copyright © 2017年 Yuichiro Tsuji. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import SnapKit
+import Alamofire
+import SWXMLHash
 
-class MainViewController: APIRequest {
+class MainViewController: UIViewController {
     @IBOutlet weak var answerView: UITextView!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var answerButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var deleteAllButton: UIButton!
     
-    //この辺はbaseでまとめたい
     var margin_width: CGFloat = 0.0
     var margin_vowel_width: CGFloat = 10
     var margin_height: CGFloat = 0.0
@@ -24,8 +26,9 @@ class MainViewController: APIRequest {
     var answer: String = ""
     var timeCount: Float = 20.0
     var timer: Timer!
+    let url = "http://public.dejizo.jp/NetDicV09.asmx/SearchDicItemLite?Dic=EJdict"
+    var isExist: Bool = false
     let userData = UserDefaults.standard
-    let width = Int()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,12 +70,10 @@ class MainViewController: APIRequest {
             button.sizeToFit()
             self.view.addSubview(button)
             
+            //レイアウトちゃんとしたい
             button.snp.makeConstraints{(make) in
-//                margin_height = self.view.bounds.height/ 5 + 15
                 make.top.equalTo(self.view.snp.top).offset(margin_height)
-//                margin_width = self.view.snp.width / 10
-                print(margin_width)
-                make.left.equalTo(self.view.snp.left).offset(CGFloat(num) * margin_width + margin_width)
+                make.left.equalTo(self.view.snp.left).offset(CGFloat(num) * margin_width + 30)
             }
         }
     }
@@ -91,10 +92,10 @@ class MainViewController: APIRequest {
             button.sizeToFit()
             self.view.addSubview(button)
             
+            //レイアウトちゃんとしたい
             button.snp.makeConstraints{(make) in
                 margin_height = self.view.bounds.height / 2.5
                 make.top.equalTo(self.view.snp.top).offset(margin_height)
-                print(margin_vowel_width)
                 make.left.equalTo(self.view.snp.left).offset(CGFloat(num) * margin_vowel_width + 50)
             }
         }
@@ -118,9 +119,9 @@ class MainViewController: APIRequest {
     }
 
     func sendAnswer() {
-        //apiで判定
         timer.invalidate()
         userData.set(timeCount, forKey: "time")
+        
         if getList(answer) {
             userData.set(answer.characters.count, forKey: "count")
             performSegue(withIdentifier: "clear", sender: nil)
@@ -170,6 +171,29 @@ class MainViewController: APIRequest {
         answerButton.isEnabled = false
         deleteButton.isEnabled = false
         deleteAllButton.isEnabled = false
+    }
+    
+    func getList(_ text: String) -> Bool {
+        let path = url + "&Word=" + text + "&Scope=HEADWORD&Match=EXACT&Merge=AND&Prof=XHTML&PageSize=20&PageIndex=0"
+        var result: String?
+        var keepAlive = true
+        let comp: String? = "0"
+        
+        let runLoop = RunLoop.current
+        Alamofire.request(path).response{ response in
+            let xml = SWXMLHash.parse(response.data!)
+            result = xml["SearchDicItemResult"]["ItemCount"].element?.text
+            keepAlive = false
+        }
+        while keepAlive &&
+            runLoop.run(mode: RunLoopMode.defaultRunLoopMode, before: NSDate(timeIntervalSinceNow: 0.1) as Date) {}
+        
+        if result != comp {
+            isExist = true
+        } else {
+            isExist = false
+        }
+        return isExist
     }
 }
 

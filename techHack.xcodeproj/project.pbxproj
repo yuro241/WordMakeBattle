@@ -13,7 +13,6 @@
 		5059DCF51F9A2F39009470BC /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5059DCF41F9A2F39009470BC /* TitleViewController.swift */; };
 		5059DCF91F9A3579009470BC /* Title.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5059DCF81F9A344D009470BC /* Title.storyboard */; };
 		5059DCFA1F9A359E009470BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5059DCF71F9A343A009470BC /* Main.storyboard */; };
-		50EF0CBC1F98979200477EF9 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF0CBB1F98979200477EF9 /* APIRequest.swift */; };
 		50F90EEB1F982E3C00D67A28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F90EEA1F982E3C00D67A28 /* AppDelegate.swift */; };
 		50F90EED1F982E3C00D67A28 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50F90EEC1F982E3C00D67A28 /* MainViewController.swift */; };
 		50F90EF21F982E3C00D67A28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50F90EF11F982E3C00D67A28 /* Assets.xcassets */; };
@@ -50,7 +49,15 @@
 		5059DCF41F9A2F39009470BC /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		5059DCF71F9A343A009470BC /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5059DCF81F9A344D009470BC /* Title.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Title.storyboard; sourceTree = "<group>"; };
-		50EF0CBB1F98979200477EF9 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		5059DCFC1F9B4812009470BC /* Icon-App-1024x1024@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-1024x1024@1x.png"; sourceTree = "<group>"; };
+		5059DCFD1F9B4812009470BC /* Icon-App-20x20@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@2x.png"; sourceTree = "<group>"; };
+		5059DCFE1F9B4812009470BC /* Icon-App-20x20@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-20x20@3x.png"; sourceTree = "<group>"; };
+		5059DCFF1F9B4812009470BC /* Icon-App-29x29@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@2x.png"; sourceTree = "<group>"; };
+		5059DD001F9B4812009470BC /* Icon-App-29x29@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-29x29@3x.png"; sourceTree = "<group>"; };
+		5059DD011F9B4812009470BC /* Icon-App-40x40@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@2x.png"; sourceTree = "<group>"; };
+		5059DD021F9B4812009470BC /* Icon-App-40x40@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-40x40@3x.png"; sourceTree = "<group>"; };
+		5059DD031F9B4812009470BC /* Icon-App-60x60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@2x.png"; sourceTree = "<group>"; };
+		5059DD041F9B4812009470BC /* Icon-App-60x60@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-App-60x60@3x.png"; sourceTree = "<group>"; };
 		50F90EE71F982E3C00D67A28 /* techHack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = techHack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50F90EEA1F982E3C00D67A28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		50F90EEC1F982E3C00D67A28 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +110,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5059DCFB1F9B4812009470BC /* iphone_img */ = {
+			isa = PBXGroup;
+			children = (
+				5059DCFC1F9B4812009470BC /* Icon-App-1024x1024@1x.png */,
+				5059DCFD1F9B4812009470BC /* Icon-App-20x20@2x.png */,
+				5059DCFE1F9B4812009470BC /* Icon-App-20x20@3x.png */,
+				5059DCFF1F9B4812009470BC /* Icon-App-29x29@2x.png */,
+				5059DD001F9B4812009470BC /* Icon-App-29x29@3x.png */,
+				5059DD011F9B4812009470BC /* Icon-App-40x40@2x.png */,
+				5059DD021F9B4812009470BC /* Icon-App-40x40@3x.png */,
+				5059DD031F9B4812009470BC /* Icon-App-60x60@2x.png */,
+				5059DD041F9B4812009470BC /* Icon-App-60x60@3x.png */,
+			);
+			path = iphone_img;
+			sourceTree = "<group>";
+		};
 		50F90EDE1F982E3C00D67A28 = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +151,7 @@
 		50F90EE91F982E3C00D67A28 /* techHack */ = {
 			isa = PBXGroup;
 			children = (
+				5059DCFB1F9B4812009470BC /* iphone_img */,
 				50F90F1D1F9832E000D67A28 /* View */,
 				50F90F1C1F9832C700D67A28 /* ViewController */,
 				50F90EEA1F982E3C00D67A28 /* AppDelegate.swift */,
@@ -159,7 +183,6 @@
 		50F90F1C1F9832C700D67A28 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				50EF0CBB1F98979200477EF9 /* APIRequest.swift */,
 				50F90EEC1F982E3C00D67A28 /* MainViewController.swift */,
 				5029B4FD1F98C5C00029DD00 /* ResultViewController.swift */,
 				5059DCF41F9A2F39009470BC /* TitleViewController.swift */,
@@ -488,7 +511,6 @@
 			files = (
 				50F90EED1F982E3C00D67A28 /* MainViewController.swift in Sources */,
 				50F90F211F98348000D67A28 /* AlphabetBase.swift in Sources */,
-				50EF0CBC1F98979200477EF9 /* APIRequest.swift in Sources */,
 				50F90EEB1F982E3C00D67A28 /* AppDelegate.swift in Sources */,
 				5029B4FE1F98C5C00029DD00 /* ResultViewController.swift in Sources */,
 				5059DCF51F9A2F39009470BC /* TitleViewController.swift in Sources */,

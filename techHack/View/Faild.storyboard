@@ -17,26 +17,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="制限時間内に正しい英単語を 作れませんでした" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NM-aA-K5y">
-                                <rect key="frame" x="5" y="129" width="364" height="89"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="制限時間内に正しい英単語を 作れませんでした" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NM-aA-K5y">
+                                <rect key="frame" x="25" y="120" width="325" height="89"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="89" id="1w4-GD-QSu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoA-i6-e0K">
-                                <rect key="frame" x="263" y="598" width="96" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LoA-i6-e0K">
+                                <rect key="frame" x="273" y="614" width="87" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.70046657990000005" blue="0.43218315969999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="タイトルへ">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <segue destination="45w-PR-Awl" kind="modal" id="baI-ar-e9u"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.61954752599999996" green="0.95391167529999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="SDL-mT-mfl" firstAttribute="bottom" secondItem="LoA-i6-e0K" secondAttribute="bottom" constant="20" id="TFG-Ih-g49"/>
+                            <constraint firstItem="SDL-mT-mfl" firstAttribute="trailing" secondItem="1NM-aA-K5y" secondAttribute="trailing" constant="25" id="WQ8-Tr-y6a"/>
+                            <constraint firstItem="SDL-mT-mfl" firstAttribute="trailing" secondItem="LoA-i6-e0K" secondAttribute="trailing" constant="15" id="aA7-vO-ZC5"/>
+                            <constraint firstItem="1NM-aA-K5y" firstAttribute="top" secondItem="SDL-mT-mfl" secondAttribute="top" constant="100" id="fI0-fI-TdL"/>
+                            <constraint firstItem="1NM-aA-K5y" firstAttribute="leading" secondItem="SDL-mT-mfl" secondAttribute="leading" constant="25" id="piZ-Qy-U6m"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SDL-mT-mfl"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="cMJ-I3-HEx"/>
